@@ -85,18 +85,18 @@ public class LoginController {
 		
 		//Updating an existing customer
 		@PutMapping("/updatePassword")
-		@ResponseBody
 		public ResponseEntity<Object> updatePassword(@RequestParam("email") String email, @RequestParam("oldPass") String oldPass, @RequestParam("newPass") String newPass) 
 		{
 			try {
 				User regUser = userRepo.findByEmail(email, null);
 				regUser.setPassword(newPass);
 				System.out.println(regUser.getPassword());
-				User updatedUser = userRepo.save(regUser);
-				return ResponseEntity.status(HttpStatus.ACCEPTED).body(updatedUser);
+				User updateUser = userRepo.save(regUser);
+				return ResponseEntity.status(HttpStatus.ACCEPTED).body(updateUser);
 			} catch (Exception e) {
 				// TODO: handle exception
-				return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
+				System.out.println(e.getMessage());
+				return new ResponseEntity<>(new ErrorResponse("General Service Call Exception","Error10"), HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 			
 		}

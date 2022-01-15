@@ -8,6 +8,6 @@ import com.example.MovieBooking.Entity.User;
 
 public interface UserRepository extends MongoRepository<User, String>{
 	
-	@Query("{ 'Email' : ?0 }")
+	@Query("{ 'email' : ?0 }")
 	User findByEmail(String email,String password);
 }

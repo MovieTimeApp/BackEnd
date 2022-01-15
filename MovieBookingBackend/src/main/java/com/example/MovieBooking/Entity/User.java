@@ -11,15 +11,15 @@ public class User{
 	
 
 	@Id
-	private String Id;
-	private String First_Name;
-	private String Middle_Name;
-	private String Last_Name;
+	private String id;
+	private String first_Name;
+	private String middle_Name;
+	private String last_Name;
 	
 	@Indexed(unique = true)
-	private String Email;
+	private String email;
 	
-	private String Password;
+	private String password;
 	
 //	public User(String first_Name, String middle_Name, String last_Name, String email, String password) {
 //		super();
@@ -31,51 +31,51 @@ public class User{
 //	}
 
 	public String getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(String id) {
-		this.Id = id;
+		this.id = id;
 	}
 
 	public String getFirst_Name() {
-		return First_Name;
+		return first_Name;
 	}
 
 	public void setFirst_Name(String first_Name) {
-		this.First_Name = first_Name;
+		this.first_Name = first_Name;
 	}
 
 	public String getMiddle_Name() {
-		return Middle_Name;
+		return middle_Name;
 	}
 
 	public void setMiddle_Name(String middle_Name) {
-		this.Middle_Name = middle_Name;
+		this.middle_Name = middle_Name;
 	}
 
 	public String getLast_Name() {
-		return Last_Name;
+		return last_Name;
 	}
 
 	public void setLast_Name(String last_Name) {
-		this.Last_Name = last_Name;
+		this.last_Name = last_Name;
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		this.Email = email;
+		this.email = email;
 	}
 
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 
 	public void setPassword(String password) {
-		this.Password = password;
+		this.password = password;
 	}
 	
 	
